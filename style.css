@@ -256,21 +256,36 @@ article li::marker { color: var(--accent); }
 .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0; }
 .badge { padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--card-border); background: rgba(255,255,255,0.04); font-size: 0.85rem; color: var(--text-muted); }
 
-/* Video */
+/* === Video Style Fix === */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* Giữ tỷ lệ 16:9 */
   height: 0;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  margin-top: 1rem;
 }
 
-.video-container iframe {
+.video-container video {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(125,211,252,0.15);
+  transition: all 0.3s ease;
 }
+
+.video-container video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 36px rgba(167,139,250,0.25);
+}
+
 
 /* Footer */
 .site-footer {
