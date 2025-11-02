@@ -237,3 +237,68 @@ body {
   .ai-info, .prompt-card { font-size: 0.95rem; }
   .ai-tools { gap: 1rem; padding: 1.5rem; }
 }
+
+
+.team-section {
+  max-width: 1200px;
+  margin: 3rem auto 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.02); /* hồng nhạt giống hình */
+  border-radius: 18px;
+  padding: 1.5rem 1.2rem 1.2rem;
+  width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.team-card .avatar {
+  width: 60px;
+  height: 60px;
+  background: #b3693f; /* đỏ tròn như hình */
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  color: #001d5a; /* xanh icon */
+  margin-bottom: 0.5rem;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .team-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
